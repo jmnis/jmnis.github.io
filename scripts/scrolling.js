@@ -1,8 +1,8 @@
 // Get the container element
-const container = document.querySelector('.slides-container');
+const container = document.querySelector('.slideshow-container');
 
 // Get all the slide elements
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.MySlides');
 
 // Set the initial slide index
 let currentSlideIndex = 0;
