@@ -1,10 +1,23 @@
-var videos = document.querySelectorAll('.slideshow iframe');
-        var currentVideo = 0;
+// Get the container element
+const container = document.querySelector('.slides-container');
 
-        function playNextVideo() {
-            videos[currentVideo].style.display = 'none';
-            currentVideo = (currentVideo + 1) % videos.length;
-            videos[currentVideo].style.display = 'block';
-        }
+// Get all the slide elements
+const slides = document.querySelectorAll('.slide');
 
-        setInterval(playNextVideo, 5000); // Change slide every 5 seconds
+// Set the initial slide index
+let currentSlideIndex = 0;
+
+// Function to slide the slides to the left
+function slideLeft() {
+    // Calculate the new slide index
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+    // Calculate the new translateX value
+    const translateX = -currentSlideIndex * 100;
+
+    // Apply the transform style to slide the slides
+    container.style.transform = `translateX(${translateX}%)`;
+}
+
+// Set the interval for automatic sliding
+setInterval(slideLeft, 3000);
