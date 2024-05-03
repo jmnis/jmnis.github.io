@@ -13,10 +13,10 @@ function slideLeft() {
     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
 
     // Calculate the new translateX value
-    const translateX = -currentSlideIndex * 100;
+    const translateY = -currentSlideIndex * 100;
 
     // Apply the transform style to slide the slides
-    container.style.transform = `translateX(${translateX}%)`;
+    container.style.transform = `translateY(${translateY}%)`;
 }
 
 // Set the interval for automatic sliding
