@@ -1,23 +1,14 @@
-// Get the container element
-const container = document.querySelector('.slideshow-container');
+let slideIndex = 0;
+showSlides();
 
-// Get all the slide elements
-const slides = document.querySelectorAll('.MySlides');
-
-// Set the initial slide index
-let currentSlideIndex = 0;
-
-// Function to slide the slides to the left
-function slideLeft() {
-    // Calculate the new slide index
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-
-    // Calculate the new translateX value
-    const translateY = -currentSlideIndex * 100;
-
-    // Apply the transform style to slide the slides
-    container.style.transform = `translateY(${translateY}%)`;
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-
-// Set the interval for automatic sliding
-setInterval(slideLeft, 3000);

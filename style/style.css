@@ -1,37 +1,23 @@
-/* GENERAL */
-.slideshow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: slideshow 10s infinite;
-}
-
-.slideshow iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-}
-
-@keyframes slideshow {
-    0% {
-        background-image: url(video/img_1.jpeg);
-    }
-    25% {
-        background-image: url(video/img_2.jpeg);
-    }
-    50% {
-        background-image: url(video/img_3.jpeg);
-    }
-    75% {
-        background-image: url(video/img_4.jpeg);
-    }
-    100% {
-        background-image: url(video/img_1.jpeg);
-    }
-}
+/* Style the slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Optional: Fade CSS animations */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
