@@ -1,13 +1,27 @@
-/* Style the slideshow container */
+/* Style the slideshow container to fill the entire background */
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Places the slideshow behind other content */
+    overflow: hidden;
+  }
+  
+  /* Ensure images cover the container */
+  .mySlides img {
+    height: 100vh;  /* 100% of the viewport height */
+    width: 100vw;   /* 100% of the viewport width */
+    object-fit: cover; /* Resize images to cover the entire viewport without stretching */
   }
   
   /* Hide the images by default */
   .mySlides {
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
   }
   
   /* Optional: Fade CSS animations */
@@ -17,7 +31,7 @@
   }
   
   @keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .4}
     to {opacity: 1}
   }
   
