@@ -1,14 +1,15 @@
-let slideIndex = 0;
-showSlides();
+document.addEventListener('DOMContentLoaded', function() {
+    let videos = document.querySelectorAll('.video-slide');
+    let currentIndex = 0;
 
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
+    function playNextVideo() {
+        videos[currentIndex].style.display = 'none'; // Hide current video
+        currentIndex = (currentIndex + 1) % videos.length; // Increment index or reset
+        videos[currentIndex].style.display = 'block'; // Show next video
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+
+    // Add 'ended' event listener to each video
+    videos.forEach(video => {
+        video.addEventListener('ended', playNextVideo);
+    });
+});
