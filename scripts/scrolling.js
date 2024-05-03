@@ -1,15 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let videos = document.querySelectorAll('.video-slide');
-    let currentIndex = 0;
+function playVideosSmoothly() {
+    const videos = document.querySelectorAll('video-slide');
+    let currentVideoIndex = 0;
 
     function playNextVideo() {
-        videos[currentIndex].style.display = 'none'; // Hide current video
-        currentIndex = (currentIndex + 1) % videos.length; // Increment index or reset
-        videos[currentIndex].style.display = 'block'; // Show next video
+        const currentVideo = videos[currentVideoIndex];
+        const nextVideoIndex = (currentVideoIndex + 1) % videos.length;
+        const nextVideo = videos[nextVideoIndex];
+
+        currentVideo.addEventListener('ended', () => {
+            currentVideo.pause();
+            currentVideo.currentTime = 0;
+            nextVideo.play();
+            currentVideoIndex = nextVideoIndex;
+        });
+
+        currentVideo.play();
     }
 
-    // Add 'ended' event listener to each video
-    videos.forEach(video => {
-        video.addEventListener('ended', playNextVideo);
-    });
-});
+    playNextVideo();
+}
+
+playVideosSmoothly();
