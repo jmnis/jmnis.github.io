@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const player = document.getElementById('videoPlayer');
-    const videos = ['video/archive.mp4', 'video/church.mp4', 'video/farm.mp4','video/forest.mp4']; // List your videos here
-    let currentVideo = 0;
 
-    player.src = videos[currentVideo]; // Ensures the first video is loaded
-    player.play();
+const player = document.getElementById('videoPlayer');
+const videos = ['video/archive.mp4', 'video/church.mp4', 'video/farm.mp4','video/forest.mp4']; // List your videos here
+let currentVideo = 0;
 
-    player.addEventListener('ended', function() {
+player.src = videos[currentVideo]; // Ensures the first video is loaded
+player.play();
+
+player.addEventListener('ended', function() {
         currentVideo++;
         if (currentVideo < videos.length) {
             player.src = videos[currentVideo];
@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', function() {
             player.play();
         }
     });
-});
+
+
