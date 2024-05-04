@@ -5,7 +5,7 @@ body, html {
     overflow: hidden; /* Prevents scrolling */
 }
 /*Add fading effect between videos*/
-video {
+.video {
     position: absolute;
     top: 0;
     left: 0;
