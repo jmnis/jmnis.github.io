@@ -4,16 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentVideo = 0;
 
     player.src = videos[currentVideo]; // Ensures the first video is loaded
+    player.load();
     player.play();
 
     player.addEventListener('ended', function() {
         currentVideo++;
         if (currentVideo < videos.length) {
             player.src = videos[currentVideo];
+            player.load();
             player.play();
         } else {
             currentVideo = 0; // Loop back to the first video
             player.src = videos[currentVideo];
+            player.load();
             player.play();
         }
     });
