@@ -1,26 +1,19 @@
-/* Style the video container */
-.background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+body, html {
     height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Keep the video behind other content */
-  }
-  
-  .video-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover; /* Cover the screen while keeping aspect ratio */
-    display: none; /* Hide videos initially */
-    z-index: -1; /* Keep the video behind other content */
-  }
-  
-  .video-slide:first-child {
-    display: block; /* Show only the first video initially */
-  }
-  
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Keeps the video behind other content */
+    background-size: cover;
+    object-fit: cover; /* Ensures the video covers the whole screen */
+}

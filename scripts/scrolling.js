@@ -1,35 +1,20 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const player = document.getElementById('videoPlayer');
+    const videos = ['video/archive.mp4', 'video/church.mp4', 'video/farm.mp4','video/forest.mp4']; // List your videos here
+    let currentVideo = 0;
 
+    player.src = videos[currentVideo]; // Ensures the first video is loaded
+    player.play();
 
-// Get the video elements
-const videos = document.querySelectorAll('video');
-
-// Set the index of the current video
-let currentVideoIndex = 0;
-
-// Play the first video when the page loads
-window.addEventListener('load', () => {
-    playVideo(currentVideoIndex);
-});
-
-// Function to play the videos in a loop
-function playVideo(index) {
-    // Play the current video
-    videos[index].play();
-
-    // When the current video ends, play the next video
-    videos[index].addEventListener('ended', () => {
-        // Pause the current video
-        videos[index].pause();
-
-        // Increment the current video index
-        currentVideoIndex++;
-
-        // Loop back to the first video if the end is reached
-        if (currentVideoIndex >= videos.length) {
-            currentVideoIndex = 0;
+    player.addEventListener('ended', function() {
+        currentVideo++;
+        if (currentVideo < videos.length) {
+            player.src = videos[currentVideo];
+            player.play();
+        } else {
+            currentVideo = 0; // Loop back to the first video
+            player.src = videos[currentVideo];
+            player.play();
         }
-
-        // Play the next video
-        playVideo(currentVideoIndex);
     });
-}
+});
