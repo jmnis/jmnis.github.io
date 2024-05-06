@@ -1,10 +1,11 @@
-document.addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const player = document.getElementById('videoPlayer');
-    const audioPlayer = document.getElementById('audioPlayer');
+    //const audioPlayer = document.getElementById('audioPlayer');
     const videos = ['video/archive.mp4', 'video/church.mp4', 'video/farm.mp4','video/forest.mp4']; // List your videos here
     let currentVideo = 0;
 
     player.src = videos[currentVideo]; // Ensures the first video is loaded
+    player.volume = 0.8;
     player.play();
     
     player.addEventListener('ended', function() {
