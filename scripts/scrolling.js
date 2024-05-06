@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentVideo = 0;
 
     player.src = videos[currentVideo]; // Ensures the first video is loaded
-    audioPlayer.play();
-    player.load();
     player.play();
 
     player.addEventListener('ended', function() {
@@ -22,4 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             player.play();
         }
     });
+});
+document.addEventListener('click', function() {
+    audioPlayer.play();
 });
