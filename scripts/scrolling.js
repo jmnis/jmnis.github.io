@@ -23,3 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('click', function() {
+        audioPlayer.play();
+    });
