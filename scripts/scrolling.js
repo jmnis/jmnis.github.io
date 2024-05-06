@@ -1,3 +1,7 @@
+document.addEventListener('click', function() {
+        audioPlayer.play();
+    });
+
 document.addEventListener('DOMContentLoaded', function() {
     const player = document.getElementById('videoPlayer');
     const audioPlayer = document.getElementById('audioPlayer');
@@ -6,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     player.src = videos[currentVideo]; // Ensures the first video is loaded
     player.play();
-
+    
     player.addEventListener('ended', function() {
         currentVideo++;
         if (currentVideo < videos.length) {
@@ -20,7 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
             player.play();
         }
     });
-});
-document.addEventListener('click', function() {
-    audioPlayer.play();
 });
