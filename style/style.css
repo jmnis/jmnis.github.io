@@ -10,3 +10,10 @@ body, html {
     min-width: 100%;
     min-height: 100%;
 }
+::cue {
+  background-image: linear-gradient(to bottom, dimgray, lightgray);
+  color: papayawhip;
+}
+::cue(b) {
+  color: peachpuff;
+}
