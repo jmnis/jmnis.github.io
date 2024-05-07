@@ -4,21 +4,21 @@ body, html {
 }
 /*Add fading effect between videos*/
 .videoPlayer {
-    position: fixed;
+    position: relative;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
 }
 #videoP{
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
 }
 #audioP {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
