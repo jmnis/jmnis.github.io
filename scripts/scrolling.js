@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('click', function() {
     const player = document.getElementById('videoP');
     const audioPlayer = document.getElementById('audioP');
     const videos = ['video/archive.mp4', 'video/church.mp4', 'video/farm.mp4','video/forest.mp4']; // List your videos here
