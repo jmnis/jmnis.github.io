@@ -10,9 +10,20 @@ body, html {
     min-width: 100%;
     min-height: 100%;
 }
-
+#videoP{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
 #audioP {
-    opacity:0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity:12;
 }
 ::cue {
   background-image: linear-gradient(to bottom, dimgray, lightgray);
