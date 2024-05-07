@@ -11,19 +11,19 @@ body, html {
     min-height: 100%;
 }
 #videoP{
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
 }
 #audioP {
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    opacity:12;
+    opacity:1;
 }
 ::cue {
   background-image: linear-gradient(to bottom, dimgray, lightgray);
