@@ -3,7 +3,7 @@ body, html {
     overflow: hidden; /* Prevents scrolling */
 }
 /*Add fading effect between videos*/
-#videoPlayer {
+.videoPlayer {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -13,11 +13,6 @@ body, html {
 
 #audioPlayer {
     opacity:0;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
 }
 ::cue {
   background-image: linear-gradient(to bottom, dimgray, lightgray);
