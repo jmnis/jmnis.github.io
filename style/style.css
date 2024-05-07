@@ -11,7 +11,7 @@ body, html {
     min-height: 100%;
 }
 
-#audioPlayer {
+#audioP {
     opacity:0;
 }
 ::cue {
