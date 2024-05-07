@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <audio id="audioPlayer" loop>
+    <video id="audioPlayer" loop>
         <source src="audio/response.mp3" type="audio/mp3">
+        <track label="English" kind="captions" srclang="fr" src="transcripts/transcript.vtt" default="">
     </audio>
     <video id="videoPlayer" autoplay muted>
         <source src="audio/response.mp3" type="audio/mp3">
         <source src="video.mp4" type="video/mp4" >
-        <track label="English" kind="captions" srclang="fr" src="transcripts/transcript.vtt" default="">
     </video>
     <script src="scripts/scrolling.js"></script>
 </body>
